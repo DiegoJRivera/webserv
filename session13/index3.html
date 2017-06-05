@@ -1,0 +1,78 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery Mobile Web App</title>
+    
+<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+<script src="jQuery/jquery-1.11.2.min.js"></script>
+<script src="jQuery/jquery.mobile-1.4.5.min.js"></script>
+<script src="jScript/script3.js"></script>
+
+<style>
+
+@media (orientation: landscape) {
+    /* write my style here */
+}
+
+#searchForm {
+    margin: 20px;
+}
+
+#city {
+    color: blue;
+    font-size: larger;
+    font-weight: bold;
+}
+
+#temperature {
+    color: red;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+#results, #loading {
+    text-align: center;
+}
+
+#loading, #results {
+    display: none;
+}
+
+</style>
+
+</head>
+ 
+<body> 
+
+<div data-role="page" id="page" data-theme="a">
+    <div data-role="header">
+        <h1>Weather AJAX Query Example</h1>
+    </div>
+    <!--<div data-role="content">-->
+    <div data-role="main" class="ui-content">
+        <section id="searchForm">
+            <input type="search" id="query" placeholder="Enter a city name..." />
+            <input type="button" value="Get Weather" id="weatherButton" />
+        </section>
+
+        <section id="loading">
+            <img src="images/ajax-loader.gif" width="35" height="35" />
+        </section>
+
+        <section>
+            <p id="city"></p>
+            <p id="description"></p>
+            <p id="temperature"></p>
+            <p id="humidity"></p>
+        </section>
+    </div>
+    
+
+   <div data-role="footer">
+        <h4>Footer</h4>
+   </div>
+</div>
+
+</body>
+</html>
